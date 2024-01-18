@@ -63,7 +63,11 @@ function App() {
 					onBookShort={handleBookShort}
 				/>
 
-				{books.length === 0 ? <NoBook /> : <BookLists books={books} />}
+				{books.length === 0 ? (
+					<NoBook />
+				) : (
+					<BookLists books={books} onFav={handleFavorite} />
+				)}
 			</main>
 			<Footer />
 		</>
